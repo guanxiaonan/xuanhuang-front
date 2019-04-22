@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <title>EZOPEN播放协议</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #url {
+      width: 100%;
+    }
+
+    .btn-container {
+      margin: 10px;
+    }
+
+    #myPlayer1,
+    #myPlayer2 {
+      max-width: 600px;
+      width: 100%;
+    }
+  </style>
+  <script src="../../src/views/video-manage/ezuikit.js"></script>
+  <script src="../../src/views/video-manage/js/jquery.min.js"></script>
+</head>
+
+<body>
+
+<video
+  id="myPlayer1"
+  autoplay
+  src=""
+  controls
+  playsInline
+  webkit-playsinline
+>
+</video>
+<video
+  id="myPlayer2"
+  autoplay
+  src=""
+  controls
+  playsInline
+  webkit-playsinline
+>
+</video>
+<!-- <video
+  id="myPlayer3"
+  autoplay
+  src=""
+  controls
+  playsInline
+  webkit-playsinline
+  >
+</video> -->
+
+
+<script>
+  $('#myPlayer1').attr('src', 'http://hls01open.ys7.com/openlive/c0274c46b65a4aa8ad5f5eb8d6b1b7fb.m3u8')
+  var player1 = new EZUIKit.EZUIPlayer('myPlayer1')
+
+  $('#myPlayer2').attr('src', 'http://hls01open.ys7.com/openlive/391d1d226e224d85918f05a4932f77b6.m3u8')
+  var player2 = new EZUIKit.EZUIPlayer('myPlayer2')
+
+  // $('#myPlayer3').attr("src", "http://hls01open.ys7.com/openlive/3989a07b70ed4e92ae3494e0c2657da8.m3u8");
+  //   var player3 = new EZUIKit.EZUIPlayer('myPlayer3');
+</script>
+</body>
+
+</html>
